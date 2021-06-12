@@ -20,12 +20,18 @@ namespace Awesome_Meal_App_191546_181510
         private string _title;
         private float _productPrice;
         private Image _productImage;
-
+        private string _productCategory;
         [Category("Product list item")]
         public string Title
         {
             get { return _title; }
             set { _title = value; lblProdTitle.Text = value; }
+        }
+        [Category("Product list item")]
+        public string ProductCategory
+        {
+            get { return _productCategory; }
+            set { _productCategory = value; lblProdCat.Text = value; }
         }
 
         [Category("Product list item")]
@@ -53,10 +59,7 @@ namespace Awesome_Meal_App_191546_181510
             MessageBox.Show("Current order button clicked "+this.Title);
         }
 
-        private void btnViewDetails_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Current product view details button clicked "+this.Title);
-        }
+        
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {

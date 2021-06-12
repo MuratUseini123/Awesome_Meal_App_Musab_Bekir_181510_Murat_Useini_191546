@@ -17,17 +17,29 @@ namespace Awesome_Meal_App_191546_181510
             InitializeComponent();
         }
         #region Properties
-        private string _title;
-        private string _info;
+        
         private Image _productImage;
         private Color _lineColor;
         private float _productPrice;
+        private string _category;
+        private string _name;
+
 
         [Category("Home Page Product")]
-        public string Title
+        public string Name
         {
-            get { return _title; }
-            set { _title = value; lblTitle.Text = value; }
+            get { return _name; }
+            set { _name = value; lblHomeProdcat.Text = value; }
+        }
+
+
+
+
+        [Category("Home Page Product")]
+        public string Category
+        {
+            get { return _category; }
+            set { _category = value; lblHomeProdcat.Text = value; }
         }
         [Category("Home Page Product")]
         public float ProductPrice
@@ -35,13 +47,6 @@ namespace Awesome_Meal_App_191546_181510
             get { return _productPrice; }
             set { _productPrice = value; lblProdPrice.Text = string.Format("${0}", value.ToString()); }
         }
-        [Category("Home Page Product")]
-        public string Info
-        {
-            get { return _info; }
-            set { _info = value; lblInfo.Text = value; }
-        }
-
         [Category("Home Page Product")]
         public Image ProductImage
         {
@@ -53,7 +58,7 @@ namespace Awesome_Meal_App_191546_181510
         public Color LineColor
         {
             get { return _lineColor; }
-            set { _lineColor = value; bckLineColor.BackColor = value; line.BackColor = value; }
+            set { _lineColor = value; bckLineColor.BackColor = value; }
         }
         #endregion
 

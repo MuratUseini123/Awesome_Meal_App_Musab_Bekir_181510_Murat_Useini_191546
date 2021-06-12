@@ -31,8 +31,13 @@ namespace Awesome_Meal_App_191546_181510
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlEmployee = new System.Windows.Forms.Panel();
+            this.btnHomePageProdEdit = new System.Windows.Forms.Button();
+            this.btnLogOut = new System.Windows.Forms.Button();
+            this.btnProdLstEdit = new System.Windows.Forms.Button();
             this.verticalLine = new System.Windows.Forms.FlowLayoutPanel();
             this.button4 = new System.Windows.Forms.Button();
+            this.staffmemberLogOutlbl = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.btnProdPanelActivate = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -43,44 +48,40 @@ namespace Awesome_Meal_App_191546_181510
             this.btnInstagram = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.productList = new System.Windows.Forms.FlowLayoutPanel();
-            this.homePageProduct = new Awesome_Meal_App_191546_181510.HomePageProduct();
             this.pnlAbout = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.button6 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.btnProdLstEdit = new System.Windows.Forms.Button();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.loggedStaffMemberInfoPnl = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
+            this.txtStMemberMessage = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.pnlEmployee = new System.Windows.Forms.Panel();
-            this.staffmemberLogOutlbl = new System.Windows.Forms.Label();
-            this.btnLogOut = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
             this.pnlCustomerMessage = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.btnHomePageProdEdit = new System.Windows.Forms.Button();
-            this.txtStMemberMessage = new System.Windows.Forms.Label();
+            this.homePageProduct = new Awesome_Meal_App_191546_181510.HomePageProduct();
             this.panel1.SuspendLayout();
+            this.pnlEmployee.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.brandPic)).BeginInit();
+            this.productList.SuspendLayout();
             this.pnlAbout.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.loggedStaffMemberInfoPnl.SuspendLayout();
-            this.pnlEmployee.SuspendLayout();
             this.pnlCustomerMessage.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -99,6 +100,73 @@ namespace Awesome_Meal_App_191546_181510
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(220, 768);
             this.panel1.TabIndex = 0;
+            // 
+            // pnlEmployee
+            // 
+            this.pnlEmployee.Controls.Add(this.btnHomePageProdEdit);
+            this.pnlEmployee.Controls.Add(this.btnLogOut);
+            this.pnlEmployee.Controls.Add(this.btnProdLstEdit);
+            this.pnlEmployee.Location = new System.Drawing.Point(0, 577);
+            this.pnlEmployee.Name = "pnlEmployee";
+            this.pnlEmployee.Size = new System.Drawing.Size(209, 156);
+            this.pnlEmployee.TabIndex = 7;
+            this.pnlEmployee.Visible = false;
+            // 
+            // btnHomePageProdEdit
+            // 
+            this.btnHomePageProdEdit.Enabled = false;
+            this.btnHomePageProdEdit.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnHomePageProdEdit.FlatAppearance.BorderSize = 0;
+            this.btnHomePageProdEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHomePageProdEdit.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnHomePageProdEdit.ForeColor = System.Drawing.Color.White;
+            this.btnHomePageProdEdit.Location = new System.Drawing.Point(0, 3);
+            this.btnHomePageProdEdit.Name = "btnHomePageProdEdit";
+            this.btnHomePageProdEdit.Size = new System.Drawing.Size(206, 52);
+            this.btnHomePageProdEdit.TabIndex = 9;
+            this.btnHomePageProdEdit.Text = "   Edit Home Page Product";
+            this.btnHomePageProdEdit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHomePageProdEdit.UseVisualStyleBackColor = true;
+            this.btnHomePageProdEdit.Visible = false;
+            this.btnHomePageProdEdit.Click += new System.EventHandler(this.btnHomePageProdEdit_Click);
+            // 
+            // btnLogOut
+            // 
+            this.btnLogOut.Enabled = false;
+            this.btnLogOut.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnLogOut.FlatAppearance.BorderSize = 0;
+            this.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogOut.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnLogOut.ForeColor = System.Drawing.Color.White;
+            this.btnLogOut.Image = ((System.Drawing.Image)(resources.GetObject("btnLogOut.Image")));
+            this.btnLogOut.Location = new System.Drawing.Point(-1, 104);
+            this.btnLogOut.Name = "btnLogOut";
+            this.btnLogOut.Size = new System.Drawing.Size(209, 52);
+            this.btnLogOut.TabIndex = 8;
+            this.btnLogOut.Text = "   Log-out";
+            this.btnLogOut.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLogOut.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnLogOut.UseVisualStyleBackColor = true;
+            this.btnLogOut.Visible = false;
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
+            // 
+            // btnProdLstEdit
+            // 
+            this.btnProdLstEdit.Enabled = false;
+            this.btnProdLstEdit.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnProdLstEdit.FlatAppearance.BorderSize = 0;
+            this.btnProdLstEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProdLstEdit.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnProdLstEdit.ForeColor = System.Drawing.Color.White;
+            this.btnProdLstEdit.Location = new System.Drawing.Point(0, 61);
+            this.btnProdLstEdit.Name = "btnProdLstEdit";
+            this.btnProdLstEdit.Size = new System.Drawing.Size(206, 52);
+            this.btnProdLstEdit.TabIndex = 6;
+            this.btnProdLstEdit.Text = "   Edit Product List";
+            this.btnProdLstEdit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProdLstEdit.UseVisualStyleBackColor = true;
+            this.btnProdLstEdit.Visible = false;
+            this.btnProdLstEdit.Click += new System.EventHandler(this.btnProdLstEdit_Click);
             // 
             // verticalLine
             // 
@@ -124,6 +192,17 @@ namespace Awesome_Meal_App_191546_181510
             this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // staffmemberLogOutlbl
+            // 
+            this.staffmemberLogOutlbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.staffmemberLogOutlbl.ForeColor = System.Drawing.Color.White;
+            this.staffmemberLogOutlbl.Location = new System.Drawing.Point(3, 736);
+            this.staffmemberLogOutlbl.Name = "staffmemberLogOutlbl";
+            this.staffmemberLogOutlbl.Size = new System.Drawing.Size(206, 32);
+            this.staffmemberLogOutlbl.TabIndex = 0;
+            this.staffmemberLogOutlbl.Text = "    EmployeeName";
+            this.staffmemberLogOutlbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // button3
             // 
@@ -246,24 +325,13 @@ namespace Awesome_Meal_App_191546_181510
             // productList
             // 
             this.productList.AutoScroll = true;
+            this.productList.Controls.Add(this.pnlAbout);
             this.productList.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.productList.Location = new System.Drawing.Point(0, 172);
             this.productList.Name = "productList";
             this.productList.Size = new System.Drawing.Size(772, 596);
             this.productList.TabIndex = 8;
             this.productList.WrapContents = false;
-            // 
-            // homePageProduct
-            // 
-            this.homePageProduct.Info = "adwadwadwadwadwadwadwa";
-            this.homePageProduct.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(41)))), ((int)(((byte)(28)))));
-            this.homePageProduct.Location = new System.Drawing.Point(0, 161);
-            this.homePageProduct.Name = "homePageProduct";
-            this.homePageProduct.ProductImage = ((System.Drawing.Image)(resources.GetObject("homePageProduct.ProductImage")));
-            this.homePageProduct.ProductPrice = 35.5F;
-            this.homePageProduct.Size = new System.Drawing.Size(650, 607);
-            this.homePageProduct.TabIndex = 7;
-            this.homePageProduct.Title = "Hamburger";
             // 
             // pnlAbout
             // 
@@ -274,103 +342,10 @@ namespace Awesome_Meal_App_191546_181510
             this.pnlAbout.Controls.Add(this.label2);
             this.pnlAbout.Controls.Add(this.pictureBox1);
             this.pnlAbout.Controls.Add(this.label1);
-            this.pnlAbout.Location = new System.Drawing.Point(3, 174);
+            this.pnlAbout.Location = new System.Drawing.Point(3, 3);
             this.pnlAbout.Name = "pnlAbout";
             this.pnlAbout.Size = new System.Drawing.Size(770, 596);
             this.pnlAbout.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(313, 69);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(155, 45);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "About Us";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(233, 137);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(300, 285);
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label2
-            // 
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(103, 451);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(572, 49);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Our story starts with you\r\n";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label3
-            // 
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.label3.Location = new System.Drawing.Point(103, 504);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(572, 390);
-            this.label3.TabIndex = 5;
-            this.label3.Text = resources.GetString("label3.Text");
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.button2);
-            this.panel5.Controls.Add(this.label5);
-            this.panel5.Controls.Add(this.label4);
-            this.panel5.Controls.Add(this.pictureBox2);
-            this.panel5.Location = new System.Drawing.Point(108, 950);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(543, 467);
-            this.panel5.TabIndex = 6;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(543, 296);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
-            // 
-            // label4
-            // 
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(0, 303);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(543, 52);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Our History";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label5
-            // 
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(0, 355);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(543, 55);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "See how far we\'ve come and how we got to now.";
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(9, 395);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(178, 48);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Learn More";
-            this.button2.UseVisualStyleBackColor = false;
             // 
             // panel6
             // 
@@ -427,22 +402,98 @@ namespace Awesome_Meal_App_191546_181510
             this.pictureBox3.TabIndex = 0;
             this.pictureBox3.TabStop = false;
             // 
-            // btnProdLstEdit
+            // panel5
             // 
-            this.btnProdLstEdit.Enabled = false;
-            this.btnProdLstEdit.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnProdLstEdit.FlatAppearance.BorderSize = 0;
-            this.btnProdLstEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProdLstEdit.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnProdLstEdit.ForeColor = System.Drawing.Color.White;
-            this.btnProdLstEdit.Location = new System.Drawing.Point(0, 61);
-            this.btnProdLstEdit.Name = "btnProdLstEdit";
-            this.btnProdLstEdit.Size = new System.Drawing.Size(206, 52);
-            this.btnProdLstEdit.TabIndex = 6;
-            this.btnProdLstEdit.Text = "   Edit Product List";
-            this.btnProdLstEdit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProdLstEdit.UseVisualStyleBackColor = true;
-            this.btnProdLstEdit.Visible = false;
+            this.panel5.Controls.Add(this.button2);
+            this.panel5.Controls.Add(this.label5);
+            this.panel5.Controls.Add(this.label4);
+            this.panel5.Controls.Add(this.pictureBox2);
+            this.panel5.Location = new System.Drawing.Point(108, 950);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(543, 467);
+            this.panel5.TabIndex = 6;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(9, 395);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(178, 48);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "Learn More";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // label5
+            // 
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(0, 355);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(543, 55);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "See how far we\'ve come and how we got to now.";
+            // 
+            // label4
+            // 
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(0, 303);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(543, 52);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Our History";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(543, 296);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.label3.Location = new System.Drawing.Point(103, 504);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(572, 390);
+            this.label3.TabIndex = 5;
+            this.label3.Text = resources.GetString("label3.Text");
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(103, 451);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(572, 49);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Our story starts with you\r\n";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(233, 140);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(300, 285);
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(313, 69);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(155, 45);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "About Us";
             // 
             // loggedStaffMemberInfoPnl
             // 
@@ -456,15 +507,14 @@ namespace Awesome_Meal_App_191546_181510
             this.loggedStaffMemberInfoPnl.TabIndex = 9;
             this.loggedStaffMemberInfoPnl.Visible = false;
             // 
-            // label8
+            // txtStMemberMessage
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(15, 16);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(114, 32);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "Welcome";
+            this.txtStMemberMessage.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtStMemberMessage.Location = new System.Drawing.Point(17, 48);
+            this.txtStMemberMessage.Name = "txtStMemberMessage";
+            this.txtStMemberMessage.Size = new System.Drawing.Size(361, 31);
+            this.txtStMemberMessage.TabIndex = 2;
+            this.txtStMemberMessage.Text = "label11";
             // 
             // label9
             // 
@@ -476,46 +526,15 @@ namespace Awesome_Meal_App_191546_181510
             this.label9.TabIndex = 1;
             this.label9.Text = "Staff member";
             // 
-            // pnlEmployee
+            // label8
             // 
-            this.pnlEmployee.Controls.Add(this.btnHomePageProdEdit);
-            this.pnlEmployee.Controls.Add(this.btnLogOut);
-            this.pnlEmployee.Controls.Add(this.btnProdLstEdit);
-            this.pnlEmployee.Location = new System.Drawing.Point(0, 577);
-            this.pnlEmployee.Name = "pnlEmployee";
-            this.pnlEmployee.Size = new System.Drawing.Size(209, 156);
-            this.pnlEmployee.TabIndex = 7;
-            this.pnlEmployee.Visible = false;
-            // 
-            // staffmemberLogOutlbl
-            // 
-            this.staffmemberLogOutlbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.staffmemberLogOutlbl.ForeColor = System.Drawing.Color.White;
-            this.staffmemberLogOutlbl.Location = new System.Drawing.Point(3, 736);
-            this.staffmemberLogOutlbl.Name = "staffmemberLogOutlbl";
-            this.staffmemberLogOutlbl.Size = new System.Drawing.Size(206, 32);
-            this.staffmemberLogOutlbl.TabIndex = 0;
-            this.staffmemberLogOutlbl.Text = "    EmployeeName";
-            this.staffmemberLogOutlbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnLogOut
-            // 
-            this.btnLogOut.Enabled = false;
-            this.btnLogOut.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnLogOut.FlatAppearance.BorderSize = 0;
-            this.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogOut.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnLogOut.ForeColor = System.Drawing.Color.White;
-            this.btnLogOut.Image = ((System.Drawing.Image)(resources.GetObject("btnLogOut.Image")));
-            this.btnLogOut.Location = new System.Drawing.Point(-1, 104);
-            this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Size = new System.Drawing.Size(209, 52);
-            this.btnLogOut.TabIndex = 8;
-            this.btnLogOut.Text = "   Log-out";
-            this.btnLogOut.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogOut.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnLogOut.UseVisualStyleBackColor = true;
-            this.btnLogOut.Visible = false;
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(15, 16);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(114, 32);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "Welcome";
             // 
             // pnlCustomerMessage
             // 
@@ -548,31 +567,17 @@ namespace Awesome_Meal_App_191546_181510
             this.label12.TabIndex = 0;
             this.label12.Text = "Welcome";
             // 
-            // btnHomePageProdEdit
+            // homePageProduct
             // 
-            this.btnHomePageProdEdit.Enabled = false;
-            this.btnHomePageProdEdit.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnHomePageProdEdit.FlatAppearance.BorderSize = 0;
-            this.btnHomePageProdEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHomePageProdEdit.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnHomePageProdEdit.ForeColor = System.Drawing.Color.White;
-            this.btnHomePageProdEdit.Location = new System.Drawing.Point(0, 3);
-            this.btnHomePageProdEdit.Name = "btnHomePageProdEdit";
-            this.btnHomePageProdEdit.Size = new System.Drawing.Size(206, 52);
-            this.btnHomePageProdEdit.TabIndex = 9;
-            this.btnHomePageProdEdit.Text = "   Edit Home Page Product";
-            this.btnHomePageProdEdit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHomePageProdEdit.UseVisualStyleBackColor = true;
-            this.btnHomePageProdEdit.Visible = false;
-            // 
-            // txtStMemberMessage
-            // 
-            this.txtStMemberMessage.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtStMemberMessage.Location = new System.Drawing.Point(17, 48);
-            this.txtStMemberMessage.Name = "txtStMemberMessage";
-            this.txtStMemberMessage.Size = new System.Drawing.Size(361, 31);
-            this.txtStMemberMessage.TabIndex = 2;
-            this.txtStMemberMessage.Text = "label11";
+            this.homePageProduct.Category = null;
+            this.homePageProduct.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(41)))), ((int)(((byte)(28)))));
+            this.homePageProduct.Location = new System.Drawing.Point(0, 161);
+            this.homePageProduct.Name = "homePageProduct";
+            this.homePageProduct.ProductImage = ((System.Drawing.Image)(resources.GetObject("homePageProduct.ProductImage")));
+            this.homePageProduct.ProductPrice = 35.5F;
+            this.homePageProduct.Size = new System.Drawing.Size(650, 607);
+            this.homePageProduct.TabIndex = 7;
+            this.homePageProduct.Name = "Hamburger";
             // 
             // Form1
             // 
@@ -581,7 +586,6 @@ namespace Awesome_Meal_App_191546_181510
             this.ClientSize = new System.Drawing.Size(1080, 768);
             this.Controls.Add(this.pnlCustomerMessage);
             this.Controls.Add(this.loggedStaffMemberInfoPnl);
-            this.Controls.Add(this.pnlAbout);
             this.Controls.Add(this.productList);
             this.Controls.Add(this.homePageProduct);
             this.Controls.Add(this.button5);
@@ -597,17 +601,18 @@ namespace Awesome_Meal_App_191546_181510
             this.Text = "Awesome Meal App";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
+            this.pnlEmployee.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.brandPic)).EndInit();
+            this.productList.ResumeLayout(false);
             this.pnlAbout.ResumeLayout(false);
             this.pnlAbout.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.panel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.loggedStaffMemberInfoPnl.ResumeLayout(false);
             this.loggedStaffMemberInfoPnl.PerformLayout();
-            this.pnlEmployee.ResumeLayout(false);
             this.pnlCustomerMessage.ResumeLayout(false);
             this.pnlCustomerMessage.PerformLayout();
             this.ResumeLayout(false);

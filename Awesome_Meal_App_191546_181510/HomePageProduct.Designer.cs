@@ -32,16 +32,16 @@ namespace Awesome_Meal_App_191546_181510
             this.lblTitle = new System.Windows.Forms.Label();
             this.pictureProduct = new System.Windows.Forms.PictureBox();
             this.lblProdPrice = new System.Windows.Forms.Label();
-            this.lblInfo = new System.Windows.Forms.Label();
-            this.btnOrder = new System.Windows.Forms.Button();
-            this.line = new System.Windows.Forms.Panel();
             this.bckLineColor = new System.Windows.Forms.Panel();
+            this.btnOrder = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblHomeProdcat = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureProduct)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitle
             // 
-            this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 25F);
             this.lblTitle.Location = new System.Drawing.Point(219, 26);
             this.lblTitle.Name = "lblTitle";
@@ -61,45 +61,12 @@ namespace Awesome_Meal_App_191546_181510
             // lblProdPrice
             // 
             this.lblProdPrice.AutoSize = true;
-            this.lblProdPrice.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProdPrice.Location = new System.Drawing.Point(473, 404);
+            this.lblProdPrice.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProdPrice.Location = new System.Drawing.Point(222, 388);
             this.lblProdPrice.Name = "lblProdPrice";
-            this.lblProdPrice.Size = new System.Drawing.Size(47, 37);
+            this.lblProdPrice.Size = new System.Drawing.Size(34, 28);
             this.lblProdPrice.TabIndex = 2;
             this.lblProdPrice.Text = "$0";
-            // 
-            // lblInfo
-            // 
-            this.lblInfo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInfo.Location = new System.Drawing.Point(128, 388);
-            this.lblInfo.Name = "lblInfo";
-            this.lblInfo.Size = new System.Drawing.Size(322, 82);
-            this.lblInfo.TabIndex = 5;
-            this.lblInfo.Text = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem " +
-    "Ipsum has been the industry\'s standard dummy text ever since the 1500s,";
-            this.lblInfo.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // btnOrder
-            // 
-            this.btnOrder.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.btnOrder.FlatAppearance.BorderSize = 0;
-            this.btnOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOrder.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOrder.ForeColor = System.Drawing.Color.White;
-            this.btnOrder.Location = new System.Drawing.Point(269, 473);
-            this.btnOrder.Name = "btnOrder";
-            this.btnOrder.Size = new System.Drawing.Size(110, 46);
-            this.btnOrder.TabIndex = 6;
-            this.btnOrder.Text = "Order";
-            this.btnOrder.UseVisualStyleBackColor = false;
-            // 
-            // line
-            // 
-            this.line.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.line.Location = new System.Drawing.Point(177, 455);
-            this.line.Name = "line";
-            this.line.Size = new System.Drawing.Size(296, 5);
-            this.line.TabIndex = 7;
             // 
             // bckLineColor
             // 
@@ -110,13 +77,58 @@ namespace Awesome_Meal_App_191546_181510
             this.bckLineColor.Size = new System.Drawing.Size(546, 125);
             this.bckLineColor.TabIndex = 4;
             // 
+            // btnOrder
+            // 
+            this.btnOrder.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.btnOrder.FlatAppearance.BorderSize = 0;
+            this.btnOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOrder.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOrder.ForeColor = System.Drawing.Color.White;
+            this.btnOrder.Location = new System.Drawing.Point(376, 400);
+            this.btnOrder.Name = "btnOrder";
+            this.btnOrder.Size = new System.Drawing.Size(110, 46);
+            this.btnOrder.TabIndex = 6;
+            this.btnOrder.Text = "Order";
+            this.btnOrder.UseVisualStyleBackColor = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(159, 388);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(58, 28);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Price:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(159, 430);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(96, 28);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "Category:";
+            // 
+            // lblHomeProdcat
+            // 
+            this.lblHomeProdcat.AutoSize = true;
+            this.lblHomeProdcat.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHomeProdcat.Location = new System.Drawing.Point(261, 430);
+            this.lblHomeProdcat.Name = "lblHomeProdcat";
+            this.lblHomeProdcat.Size = new System.Drawing.Size(16, 28);
+            this.lblHomeProdcat.TabIndex = 9;
+            this.lblHomeProdcat.Text = ".";
+            // 
             // HomePageProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.line);
+            this.Controls.Add(this.lblHomeProdcat);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnOrder);
-            this.Controls.Add(this.lblInfo);
             this.Controls.Add(this.pictureProduct);
             this.Controls.Add(this.bckLineColor);
             this.Controls.Add(this.lblProdPrice);
@@ -135,9 +147,10 @@ namespace Awesome_Meal_App_191546_181510
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.PictureBox pictureProduct;
         private System.Windows.Forms.Label lblProdPrice;
-        private System.Windows.Forms.Label lblInfo;
-        private System.Windows.Forms.Button btnOrder;
-        private System.Windows.Forms.Panel line;
         private System.Windows.Forms.Panel bckLineColor;
+        private System.Windows.Forms.Button btnOrder;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblHomeProdcat;
     }
 }

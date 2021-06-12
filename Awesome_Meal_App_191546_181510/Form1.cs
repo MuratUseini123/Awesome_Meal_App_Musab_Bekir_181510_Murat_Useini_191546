@@ -14,7 +14,8 @@ namespace Awesome_Meal_App_191546_181510
     {
         static private List<ProductClass> products;
         static private EmployeeClass currentLoggedEmploye;
-       // private bool isLoginFormActive = false;
+        // private bool isLoginFormActive = false;
+        bool visibleforcheck = false;
         public Product productx = new Product();
         public Form1()
         {
@@ -92,7 +93,7 @@ namespace Awesome_Meal_App_191546_181510
             {
                 productx = new Product();
                 this.productx.BackColor = System.Drawing.SystemColors.ControlDark;
-                this.productx.Image = Image.FromFile(@"C:\Users\inTech_PC\source\repos\Awesome_Meal_App_191546_181510\Awesome_Meal_App_191546_181510\Images\pngaaa.com-2056024.png");
+                
                 this.productx.Location = new System.Drawing.Point(3, 3 + (i + 100));
                 this.productx.Name = "product1";
                 this.productx.ProductPrice = 25.5F;
@@ -136,18 +137,23 @@ namespace Awesome_Meal_App_191546_181510
             
             verticalLine.Location = new System.Drawing.Point(210, 84+104);
 
-            LoginForm newLoginForm = new LoginForm();
-            newLoginForm.ShowDialog();
-
-            /*while (!isLoginFormActive)
+            if (!pnlEmployee.Visible)
             {
-                this.Enabled = false;
-            }*///TODO if login form is active then main Form is disabled for interaction
+                LoginForm newLoginForm = new LoginForm();
+                newLoginForm.ShowDialog();
 
-            //bool isUser = true;
-            if(newLoginForm.DialogResult == DialogResult.OK)
-            {
-                currentLoggedEmploye = newLoginForm.loggedEmployee;
+                /*while (!isLoginFormActive)
+                {
+                    this.Enabled = false;
+                }*///TODO if login form is active then main Form is disabled for interaction
+
+                //bool isUser = true;
+
+                if (newLoginForm.DialogResult == DialogResult.OK)
+                {
+
+                    currentLoggedEmploye = newLoginForm.loggedEmployee;
+
                     pnlCustomerMessage.Enabled = false;
                     pnlCustomerMessage.Visible = false;
                     loggedStaffMemberInfoPnl.Enabled = true;
@@ -158,8 +164,8 @@ namespace Awesome_Meal_App_191546_181510
                     txtStMemberMessage.Enabled = true;
                     txtStMemberMessage.Visible = true;
 
-                    txtStMemberMessage.Text = currentLoggedEmploye.Name + " " + currentLoggedEmploye.Surname;
-                    staffmemberLogOutlbl.Text = currentLoggedEmploye.Name + " " + currentLoggedEmploye.Surname;
+                    txtStMemberMessage.Text = currentLoggedEmploye.EmployeeId;
+                    staffmemberLogOutlbl.Text = currentLoggedEmploye.EmployeeId;
 
                     btnHomePageProdEdit.Enabled = true;
                     btnHomePageProdEdit.Visible = true;
@@ -172,7 +178,14 @@ namespace Awesome_Meal_App_191546_181510
 
                     staffmemberLogOutlbl.Enabled = true;
                     staffmemberLogOutlbl.Visible = true;
+
+                }
             }
+            else
+            {
+                MessageBox.Show("OUU YEAHh");
+            }
+           
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -181,7 +194,57 @@ namespace Awesome_Meal_App_191546_181510
             productList.Visible = false;
             homePageProduct.Visible = false;
             pnlAbout.Visible = true;
-           
+        }
+
+        private void btnProdLstEdit_Click(object sender, EventArgs e)
+        {
+            ProductControlForm newProdCForm = new ProductControlForm();
+            newProdCForm.Show();
+        }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            
+            pnlCustomerMessage.Enabled = true;
+            pnlCustomerMessage.Visible = true;
+            loggedStaffMemberInfoPnl.Enabled = false;
+            loggedStaffMemberInfoPnl.Visible = false;
+            pnlEmployee.Enabled = false;
+            pnlEmployee.Visible = false;
+
+            txtStMemberMessage.Enabled = false;
+            txtStMemberMessage.Visible = false;
+
+            txtStMemberMessage.Text = "";
+            staffmemberLogOutlbl.Text = "";
+
+            currentLoggedEmploye = null; 
+
+            btnHomePageProdEdit.Enabled = false;
+            btnHomePageProdEdit.Visible = false;
+
+            btnProdLstEdit.Enabled = false;
+            btnProdLstEdit.Visible = false;
+
+            btnLogOut.Enabled = false;
+            btnLogOut.Visible = false;
+
+            staffmemberLogOutlbl.Enabled = true;
+            staffmemberLogOutlbl.Visible = true;
+        }
+
+        private void btnHomePageProdEdit_Click(object sender, EventArgs e)
+        {
+            HomePageProductEdit newForm = new HomePageProductEdit();
+            newForm.ShowDialog();
+            if(newForm.DialogResult == DialogResult.OK)
+            {
+                homePageProduct.Category = newForm.newHomePageProd.ProductCategory;
+                homePageProduct.ProductPrice = newForm.newHomePageProd.ProductPrice;
+                //homePageProduct.ProductName = newForm.tempString;
+                homePageProduct.ProductImage = newForm.newHomePageProd.ProductImage;
+
+            }
         }
     }
 }

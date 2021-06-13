@@ -46,7 +46,7 @@ Logged In *Employees*
 - Their username will be written below "Log Out" button.
 - Logged in employees will be able to edit the database "FoodDatabase.mdf". After an employee logs in, 
 1. Edit Home Page Product button;
--[EditHomePageProd](https://user-images.githubusercontent.com/63672103/121819981-6feb9880-cc90-11eb-84f5-6e9a90fb746f.PNG)
+- ![EditHomePageProd](https://user-images.githubusercontent.com/63672103/121819981-6feb9880-cc90-11eb-84f5-6e9a90fb746f.PNG)
 2. Edit Product List button;
 3. Log-out button;
 will appear on the bottom right of the application.

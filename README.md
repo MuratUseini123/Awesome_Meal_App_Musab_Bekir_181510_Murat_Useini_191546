@@ -47,16 +47,14 @@ Logged In *Employees*
 - Logged in employees will be able to edit the database "FoodDatabase.mdf". After an employee logs in, 
 1. Edit Home Page Product button;
 2. Edit Product List button;
-
 3. Log-out button;
 will appear on the bottom right of the application.
 - Logged in employee can edit the home page product by clicking the "Edit Home Page Product" button. They will be redirected to a new form where they can edit the home page product.
 - At the form employee will have to input Price, Title, Category and Picture of the product. After writing the necessary data, they will be able to click "Edit" button.
-
 "Edit Product List"
 - Logged in employee will be able to edit the current database by clicking Edit Product List button which will appear on bottom right after a successful log in.
 - ![homepageproduct edit](https://user-images.githubusercontent.com/63672103/121813256-9e0ab180-cc6b-11eb-9ad4-b77aa86be787.png)
-- After clicking the button, employee will be displayed a database of current products and textboxes for being able to add new product.
+- After clicking the button, employee will be displayed a database of current products at which they can edit the data of them.
 
 "Log Out"
 - Log out button can be clicked by an employee so that they can log out from the system.

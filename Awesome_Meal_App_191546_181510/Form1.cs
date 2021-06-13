@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,41 +14,32 @@ namespace Awesome_Meal_App_191546_181510
 {
     public partial class Form1 : Form
     {
-        static private List<ProductClass> products;
+        private List<ProductClass> products;
         static private EmployeeClass currentLoggedEmploye;
-        // private bool isLoginFormActive = false;
-        bool visibleforcheck = false;
+
         public Product productx = new Product();
         public Form1()
         {
             products = new List<ProductClass>();
             currentLoggedEmploye = null;
             InitializeComponent();
-        }
-
-        private void brandPic_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-
+            
         }
 
         private void btnFacebook_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Facebook Link");
+            System.Diagnostics.Process.Start("https://www.facebook.com/FINKI.ukim.mk/");
         }
 
         private void btnTwiter_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Twitter link");
+            System.Diagnostics.Process.Start("https://twitter.com/finkiedu?lang=en");
         }
 
         private void btnInstagram_Click(object sender, EventArgs e)
         {
-           MessageBox.Show("Instagram Link");
+            
+            System.Diagnostics.Process.Start("https://www.google.com/search?q=Finki+instagram&sxsrf=ALeKk00fx5p2yzvT5h8dCXUc1oBKQjpDCA%3A1623590593055&source=hp&ei=wQbGYNhCnI2Fsg-XtYfYCw&iflsig=AINFCbYAAAAAYMYU0eitVtiVP6fasKrWNek2POhLTY3f&oq=Finki+instagram&gs_lcp=Cgdnd3Mtd2l6EAMyBAgjECc6CgguEMcBEK8BEEM6BAgAEEM6AggAOgcIABCHAhAUOg0ILhCHAhDHARCvARAUOgUIABCRAjoECAAQCjoECC4QCjoICAAQFhAKEB46BggAEBYQHjoFCCEQoAE6BwghEAoQoAE6BwgjELACECdQ3ghYrj9gqUJoCXAAeACAAaQBiAGNFZIBBDcuMTeYAQCgAQGqAQdnd3Mtd2l6&sclient=gws-wiz&ved=0ahUKEwiYp7qk2pTxAhWcRkEAHZfaAbsQ4dUDCAc&uact=5");
         }
 
         private void button5_Click_1(object sender, EventArgs e)
@@ -72,6 +65,8 @@ namespace Awesome_Meal_App_191546_181510
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            initProducts();
+            homePageProduct.Category = "Hamburger";
            
             productList.Visible = false;
             homePageProduct.Visible = true;
@@ -88,49 +83,32 @@ namespace Awesome_Meal_App_191546_181510
 
             staffmemberLogOutlbl.Enabled = false;
             staffmemberLogOutlbl.Visible = false;
-            
-            for (int i = 0; i < 100; i++)
+
+            initProductList();
+        }
+
+
+        private void initProductList()
+        {
+            int index = 0;
+            foreach (ProductClass product in products)
             {
                 productx = new Product();
                 this.productx.BackColor = System.Drawing.SystemColors.ControlDark;
-                
-                this.productx.Location = new System.Drawing.Point(3, 3 + (i + 100));
-                this.productx.Name = "product1";
-                this.productx.ProductPrice = 25.5F;
+
+                this.productx.Location = new System.Drawing.Point(3, 3 + (index + 100));
+                this.productx.PName = product.ProductName;
+                this.productx.ProductPrice = product.ProductPrice;
                 this.productx.Size = new System.Drawing.Size(724, 193);
-                this.productx.TabIndex = i;
-                this.productx.Title = "Doner" + i;
+                this.productx.TabIndex = index;
+                this.productx.ProductCategory = product.ProductCategory;
+
                 productList.Controls.Add(productx);
 
-                ProductClass newProduct = new ProductClass("Doner"+i,"wadwad",25.5F,productx.Image,i);
-                products.Add(newProduct);
-
-
                 productx = null;
+                index = index + 1;
             }
         }
-
-        /*private void switchMessagePanel(bool isUser)
-        {
-            if (isUser)
-            {
-                pnlCustomerMessage.Enabled = true;
-                pnlCustomerMessage.Visible = true;
-                loggedStaffMemberInfoPnl.Enabled = false;
-                loggedStaffMemberInfoPnl.Visible = false;
-                pnlEmployee.Enabled = false;
-                pnlEmployee.Visible = false;
-            }
-            else
-            {
-                pnlCustomerMessage.Enabled = false;
-                pnlCustomerMessage.Visible = false;
-                loggedStaffMemberInfoPnl.Enabled = true;
-                loggedStaffMemberInfoPnl.Visible = true;
-                pnlEmployee.Enabled = true;
-                pnlEmployee.Visible = true;
-            }
-        }*/
 
         private void button3_Click(object sender, EventArgs e)//TODO make sure there is only one instance of login form
         {
@@ -141,13 +119,6 @@ namespace Awesome_Meal_App_191546_181510
             {
                 LoginForm newLoginForm = new LoginForm();
                 newLoginForm.ShowDialog();
-
-                /*while (!isLoginFormActive)
-                {
-                    this.Enabled = false;
-                }*///TODO if login form is active then main Form is disabled for interaction
-
-                //bool isUser = true;
 
                 if (newLoginForm.DialogResult == DialogResult.OK)
                 {
@@ -183,7 +154,7 @@ namespace Awesome_Meal_App_191546_181510
             }
             else
             {
-                MessageBox.Show("OUU YEAHh");
+                MessageBox.Show("You are allready logged in as username: "+currentLoggedEmploye.EmployeeId);
             }
            
         }
@@ -200,6 +171,26 @@ namespace Awesome_Meal_App_191546_181510
         {
             ProductControlForm newProdCForm = new ProductControlForm();
             newProdCForm.Show();
+            if(newProdCForm.DialogResult == DialogResult.OK)
+            {
+                
+                productList.Controls.Clear();
+                /*productList.Dispose();
+
+                productList = new FlowLayoutPanel();
+
+                this.productList.AutoScroll = true;
+                this.productList.Controls.Add(this.pnlAbout);
+                this.productList.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+                this.productList.Location = new System.Drawing.Point(0, 172);
+                this.productList.Name = "productList";
+                this.productList.Size = new System.Drawing.Size(772, 596);
+                this.productList.TabIndex = 8;
+                this.productList.WrapContents = false;*/
+
+                initProducts();
+                initProductList();
+            }
         }
 
         private void btnLogOut_Click(object sender, EventArgs e)
@@ -241,9 +232,41 @@ namespace Awesome_Meal_App_191546_181510
             {
                 homePageProduct.Category = newForm.newHomePageProd.ProductCategory;
                 homePageProduct.ProductPrice = newForm.newHomePageProd.ProductPrice;
-                //homePageProduct.ProductName = newForm.tempString;
+                homePageProduct.Home_Product_Name = newForm.newHomePageProd.ProductName;
                 homePageProduct.ProductImage = newForm.newHomePageProd.ProductImage;
+            }
+        }
+        private void initProducts()
+        {
+            string fileName = "FoodDatabase.mdf";
+            string path = Path.GetFullPath(fileName);
 
+            SqlConnection sqlProductsConnection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + path + ";Integrated Security=True");
+
+            sqlProductsConnection.Open();
+
+            SqlDataAdapter sqlProductAdapter = new SqlDataAdapter("SELECT * FROM Food",sqlProductsConnection);
+
+            DataTable dtTable = new DataTable();
+
+            sqlProductAdapter.Fill(dtTable);
+
+            foreach(DataRow dtRow in dtTable.Rows)
+            {
+                int tempID;
+                bool tempB = int.TryParse(dtRow["Id"].ToString(), out tempID);
+
+                float tempPrice;
+                bool tempBF = float.TryParse(dtRow["Price"].ToString(), out tempPrice);
+                
+                products.Add(new ProductClass()
+                {
+                    Id = tempID,
+                    ProductPrice = tempPrice,
+                    ProductCategory = dtRow["FoodCategoryName"].ToString(),
+                    ProductImage = null,
+                    ProductName = dtRow["FoodName"].ToString()
+                }) ;
             }
         }
     }

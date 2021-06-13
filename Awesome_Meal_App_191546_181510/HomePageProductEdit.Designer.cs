@@ -40,6 +40,7 @@ namespace Awesome_Meal_App_191546_181510
             this.txtNewProdPrice = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnConfirmNewProd = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,6 +50,7 @@ namespace Awesome_Meal_App_191546_181510
             this.pictureBox1.Location = new System.Drawing.Point(37, 31);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(266, 253);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.DragDrop += new System.Windows.Forms.DragEventHandler(this.pictureBox1_DragDrop);
@@ -156,11 +158,22 @@ namespace Awesome_Meal_App_191546_181510
             this.btnConfirmNewProd.UseVisualStyleBackColor = false;
             this.btnConfirmNewProd.Click += new System.EventHandler(this.btnConfirmNewProd_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(70, 287);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(205, 13);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "*please select your image and drop it here";
+            // 
             // HomePageProductEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(617, 471);
+            this.ClientSize = new System.Drawing.Size(617, 416);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.btnConfirmNewProd);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.txtNewProdPrice);
@@ -194,5 +207,6 @@ namespace Awesome_Meal_App_191546_181510
         private System.Windows.Forms.TextBox txtNewProdPrice;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnConfirmNewProd;
+        private System.Windows.Forms.Label label4;
     }
 }

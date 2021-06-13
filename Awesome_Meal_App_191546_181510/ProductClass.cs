@@ -19,9 +19,9 @@ namespace Awesome_Meal_App_191546_181510
         {
 
         }
-        public ProductClass(string ProductTitle, string ProductCategory, float ProductPrice,Image ProductImage,int id)
+        public ProductClass(string ProductName, string ProductCategory, float ProductPrice,Image ProductImage,int id)
         {
-            this.ProductName = ProductTitle;
+            this.ProductName = ProductName;
             this.ProductCategory = ProductCategory;
             this.ProductPrice = ProductPrice;
             this.ProductImage = ProductImage;
@@ -29,7 +29,7 @@ namespace Awesome_Meal_App_191546_181510
         }
         public override string ToString()
         {
-            return string.Format("{0} ${1} {3}\n", this.ProductName, this.ProductPrice, this.Id);
+            return string.Format("{0} ${1} {2}\n", this.ProductName, this.ProductPrice, this.ProductCategory);
         }
     }
 }

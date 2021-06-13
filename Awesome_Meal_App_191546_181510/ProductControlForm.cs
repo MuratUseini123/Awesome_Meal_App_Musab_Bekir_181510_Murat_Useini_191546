@@ -22,6 +22,7 @@ namespace Awesome_Meal_App_191546_181510
             this.Validate();
             this.foodBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.foodDatabaseDataSet);
+            DialogResult = DialogResult.OK;
 
         }
 
@@ -30,6 +31,14 @@ namespace Awesome_Meal_App_191546_181510
             // TODO: This line of code loads data into the 'foodDatabaseDataSet.Food' table. You can move, or remove it, as needed.
             this.foodTableAdapter.Fill(this.foodDatabaseDataSet.Food);
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.foodBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.foodDatabaseDataSet);
+            DialogResult = DialogResult.OK;
         }
     }
 }

@@ -17,15 +17,15 @@ namespace Awesome_Meal_App_191546_181510
             InitializeComponent();
         }
         #region Properties
-        private string _title;
+        private string _pName;
         private float _productPrice;
         private Image _productImage;
         private string _productCategory;
         [Category("Product list item")]
-        public string Title
+        public string PName
         {
-            get { return _title; }
-            set { _title = value; lblProdTitle.Text = value; }
+            get { return _pName; }
+            set { _pName = value; lblProdTitle.Text = value; }
         }
         [Category("Product list item")]
         public string ProductCategory
@@ -56,7 +56,7 @@ namespace Awesome_Meal_App_191546_181510
 
         private void btnOrder_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Current order button clicked "+this.Title);
+            MessageBox.Show("Current order button clicked "+this.ProductName);
         }
 
         

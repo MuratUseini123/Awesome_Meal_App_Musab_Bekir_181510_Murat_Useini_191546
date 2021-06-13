@@ -22,18 +22,15 @@ namespace Awesome_Meal_App_191546_181510
         private Color _lineColor;
         private float _productPrice;
         private string _category;
-        private string _name;
+        private string _home_product_name;
 
 
         [Category("Home Page Product")]
-        public string Name
+        public string Home_Product_Name
         {
-            get { return _name; }
-            set { _name = value; lblHomeProdcat.Text = value; }
+            get { return _home_product_name; }
+            set { _home_product_name = value; lblProductHomePage.Text = value; }
         }
-
-
-
 
         [Category("Home Page Product")]
         public string Category

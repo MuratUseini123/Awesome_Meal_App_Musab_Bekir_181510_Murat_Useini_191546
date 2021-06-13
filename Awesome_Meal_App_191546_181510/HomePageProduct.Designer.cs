@@ -29,7 +29,6 @@ namespace Awesome_Meal_App_191546_181510
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblTitle = new System.Windows.Forms.Label();
             this.pictureProduct = new System.Windows.Forms.PictureBox();
             this.lblProdPrice = new System.Windows.Forms.Label();
             this.bckLineColor = new System.Windows.Forms.Panel();
@@ -37,17 +36,9 @@ namespace Awesome_Meal_App_191546_181510
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblHomeProdcat = new System.Windows.Forms.Label();
+            this.lblProductHomePage = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureProduct)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lblTitle
-            // 
-            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 25F);
-            this.lblTitle.Location = new System.Drawing.Point(219, 26);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(211, 46);
-            this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "Product Title";
             // 
             // pictureProduct
             // 
@@ -84,7 +75,7 @@ namespace Awesome_Meal_App_191546_181510
             this.btnOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOrder.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOrder.ForeColor = System.Drawing.Color.White;
-            this.btnOrder.Location = new System.Drawing.Point(376, 400);
+            this.btnOrder.Location = new System.Drawing.Point(266, 470);
             this.btnOrder.Name = "btnOrder";
             this.btnOrder.Size = new System.Drawing.Size(110, 46);
             this.btnOrder.TabIndex = 6;
@@ -121,10 +112,21 @@ namespace Awesome_Meal_App_191546_181510
             this.lblHomeProdcat.TabIndex = 9;
             this.lblHomeProdcat.Text = ".";
             // 
+            // lblProductHomePage
+            // 
+            this.lblProductHomePage.Font = new System.Drawing.Font("Segoe UI", 30F);
+            this.lblProductHomePage.Location = new System.Drawing.Point(164, 10);
+            this.lblProductHomePage.Name = "lblProductHomePage";
+            this.lblProductHomePage.Size = new System.Drawing.Size(435, 62);
+            this.lblProductHomePage.TabIndex = 10;
+            this.lblProductHomePage.Text = "Product Name";
+            this.lblProductHomePage.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // HomePageProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.lblProductHomePage);
             this.Controls.Add(this.lblHomeProdcat);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -132,7 +134,6 @@ namespace Awesome_Meal_App_191546_181510
             this.Controls.Add(this.pictureProduct);
             this.Controls.Add(this.bckLineColor);
             this.Controls.Add(this.lblProdPrice);
-            this.Controls.Add(this.lblTitle);
             this.Name = "HomePageProduct";
             this.Size = new System.Drawing.Size(650, 607);
             this.Load += new System.EventHandler(this.HomePageProduct_Load);
@@ -143,8 +144,6 @@ namespace Awesome_Meal_App_191546_181510
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.PictureBox pictureProduct;
         private System.Windows.Forms.Label lblProdPrice;
         private System.Windows.Forms.Panel bckLineColor;
@@ -152,5 +151,6 @@ namespace Awesome_Meal_App_191546_181510
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblHomeProdcat;
+        private System.Windows.Forms.Label lblProductHomePage;
     }
 }

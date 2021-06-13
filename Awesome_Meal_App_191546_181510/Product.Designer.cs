@@ -56,9 +56,9 @@ namespace Awesome_Meal_App_191546_181510
             this.lblProdTitle.ForeColor = System.Drawing.Color.White;
             this.lblProdTitle.Location = new System.Drawing.Point(339, 33);
             this.lblProdTitle.Name = "lblProdTitle";
-            this.lblProdTitle.Size = new System.Drawing.Size(167, 37);
+            this.lblProdTitle.Size = new System.Drawing.Size(187, 37);
             this.lblProdTitle.TabIndex = 1;
-            this.lblProdTitle.Text = "Product Title";
+            this.lblProdTitle.Text = "Product Name";
             // 
             // lblPrice
             // 

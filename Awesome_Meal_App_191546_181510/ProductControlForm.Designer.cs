@@ -158,7 +158,7 @@ namespace Awesome_Meal_App_191546_181510
             this.foodBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.foodBindingNavigator.Name = "foodBindingNavigator";
             this.foodBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.foodBindingNavigator.Size = new System.Drawing.Size(830, 25);
+            this.foodBindingNavigator.Size = new System.Drawing.Size(488, 25);
             this.foodBindingNavigator.TabIndex = 0;
             this.foodBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -214,6 +214,7 @@ namespace Awesome_Meal_App_191546_181510
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -349,7 +350,7 @@ namespace Awesome_Meal_App_191546_181510
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(830, 545);
+            this.ClientSize = new System.Drawing.Size(488, 545);
             this.Controls.Add(this.foodDataGridView);
             this.Controls.Add(idLabel);
             this.Controls.Add(this.idTextBox);

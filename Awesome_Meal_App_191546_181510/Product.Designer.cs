@@ -29,6 +29,7 @@ namespace Awesome_Meal_App_191546_181510
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Product));
             this.productPicture = new System.Windows.Forms.PictureBox();
             this.lblProdTitle = new System.Windows.Forms.Label();
             this.lblPrice = new System.Windows.Forms.Label();
@@ -41,10 +42,11 @@ namespace Awesome_Meal_App_191546_181510
             // 
             // productPicture
             // 
-            this.productPicture.Dock = System.Windows.Forms.DockStyle.Left;
-            this.productPicture.Location = new System.Drawing.Point(0, 0);
+            this.productPicture.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.productPicture.Image = ((System.Drawing.Image)(resources.GetObject("productPicture.Image")));
+            this.productPicture.Location = new System.Drawing.Point(25, 13);
             this.productPicture.Name = "productPicture";
-            this.productPicture.Size = new System.Drawing.Size(288, 193);
+            this.productPicture.Size = new System.Drawing.Size(209, 169);
             this.productPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.productPicture.TabIndex = 0;
             this.productPicture.TabStop = false;
@@ -78,7 +80,7 @@ namespace Awesome_Meal_App_191546_181510
             this.btnOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnOrder.ForeColor = System.Drawing.Color.White;
-            this.btnOrder.Location = new System.Drawing.Point(531, 33);
+            this.btnOrder.Location = new System.Drawing.Point(551, 39);
             this.btnOrder.Name = "btnOrder";
             this.btnOrder.Size = new System.Drawing.Size(124, 37);
             this.btnOrder.TabIndex = 3;

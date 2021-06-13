@@ -169,15 +169,62 @@ namespace Awesome_Meal_App_191546_181510
 
         private void btnProdLstEdit_Click(object sender, EventArgs e)
         {
-            ProductControlForm newProdCForm = new ProductControlForm();
-            newProdCForm.Show();
-            if(newProdCForm.DialogResult == DialogResult.OK)
+            productdatabasecontrol newDbEdit = new productdatabasecontrol();
+            newDbEdit.ShowDialog();
+
+            MessageBox.Show(newDbEdit.DialogResult.ToString());
+            
+            if(newDbEdit.DialogResult == DialogResult.OK)
             {
                 
+                /*List<ProductClass> tempList = new List<ProductClass>();
+
+                string fileName = "FoodDatabase.mdf";
+                string path = Path.GetFullPath(fileName);
+
+
+                SqlConnection sqlProductsConnection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + path + ";Integrated Security=True");
+
+                sqlProductsConnection.Open();
+
+                SqlDataAdapter sqlProductAdapter = new SqlDataAdapter("SELECT * FROM Food", sqlProductsConnection);
+
+                DataTable dtTable = new DataTable();
+
+                sqlProductAdapter.Fill(dtTable);
+
+                foreach (DataRow dtRow in dtTable.Rows)
+                {
+                    int tempID;
+                    bool tempB = int.TryParse(dtRow["Id"].ToString(), out tempID);
+
+                    float tempPrice;
+                    bool tempBF = float.TryParse(dtRow["Price"].ToString(), out tempPrice);
+
+                    tempList.Add(new ProductClass()
+                    {
+                        Id = tempID,
+                        ProductPrice = tempPrice,
+                        ProductCategory = dtRow["FoodCategoryName"].ToString(),
+                        ProductImage = null,
+                        ProductName = dtRow["FoodName"].ToString()
+                    });
+
+                }
+                products = tempList;*/
+
+                //----------------------------------
                 productList.Controls.Clear();
-                /*productList.Dispose();
+                products.Clear();
+
+                initProducts();
+
+                productList.Dispose();
 
                 productList = new FlowLayoutPanel();
+
+                this.Controls.Add(this.productList);
+                initProductList();
 
                 this.productList.AutoScroll = true;
                 this.productList.Controls.Add(this.pnlAbout);
@@ -186,11 +233,12 @@ namespace Awesome_Meal_App_191546_181510
                 this.productList.Name = "productList";
                 this.productList.Size = new System.Drawing.Size(772, 596);
                 this.productList.TabIndex = 8;
-                this.productList.WrapContents = false;*/
+                this.productList.WrapContents = false;
+                
 
-                initProducts();
-                initProductList();
-            }
+
+
+            } 
         }
 
         private void btnLogOut_Click(object sender, EventArgs e)
@@ -241,6 +289,7 @@ namespace Awesome_Meal_App_191546_181510
             string fileName = "FoodDatabase.mdf";
             string path = Path.GetFullPath(fileName);
 
+            
             SqlConnection sqlProductsConnection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + path + ";Integrated Security=True");
 
             sqlProductsConnection.Open();
@@ -258,16 +307,27 @@ namespace Awesome_Meal_App_191546_181510
 
                 float tempPrice;
                 bool tempBF = float.TryParse(dtRow["Price"].ToString(), out tempPrice);
-                
+
+                /*string pathImage = Path.GetFullPath(@"C:\MenuIconForProducts.png");
+
+                Image tmpImage = Image.FromFile(pathImage);*/
+
+                string filename = "MenuIconProd.png";
+                string pathImage = Path.GetFullPath(filename);
+                //MessageBox.Show(pathImage);
+                Image tmpImage = Image.FromFile(pathImage);
+
                 products.Add(new ProductClass()
                 {
                     Id = tempID,
                     ProductPrice = tempPrice,
                     ProductCategory = dtRow["FoodCategoryName"].ToString(),
-                    ProductImage = null,
+                    ProductImage = tmpImage,
                     ProductName = dtRow["FoodName"].ToString()
                 }) ;
+                
             }
+            
         }
     }
 }
